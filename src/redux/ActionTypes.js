@@ -1,0 +1,7 @@
+export const ADD_TO_BASKET = 'ADD_TO_BASKET'
+export const MINUS = "MINUS"
+export const GET_PRODUCT = 'GET_PRODUCT'
+export const DELETE_PRODUCT = 'DELETE_PRODUCT'
+export const ADD_and_DELETE_FAVORITES = 'ADD_and_DELETE_FAVORITES'
+export const ADD_TO_FAVORITES = 'ADD_TO_FAVORITES'
+export const CHOOSE_THE_CURRENCY = 'CHOOSE_THE_CURRENCY'

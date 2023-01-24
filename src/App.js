@@ -1,19 +1,20 @@
 import './App.scss';
-import { useDispatch } from 'react-redux';
-import { useSelector } from 'react-redux';
-import Example from './components/Example';
+import Header from "./components/Header";
+import {Route, Routes} from "react-router-dom";
+import Product from "./page/Product";
+import Basket from "./page/Basket";
+import Favorites from "./page/Favorites";
+
 function App() {
-  const dispatch = useDispatch();
-  const balances = useSelector(state => {
-    console.log(state);
-    return state.money;
-  });
+
   return (
       <div className='App'>
-        <h1>{balances}</h1>
-        <button onClick={() => dispatch({ type: 'ADD_MONEY', payload: 4 })}>+</button>
-        <button onClick={() => dispatch({ type: 'ADD_MONEY', payload:-4 })}>-</button>
-        <Example/>
+          <Header/>
+          <Routes>
+              <Route path={'/'} element={<Product/>}/>
+              <Route path={'/basket'} element={<Basket/>}/>
+              <Route path={'/favorites'} element={<Favorites/>}/>
+          </Routes>
       </div>
   );
 }
