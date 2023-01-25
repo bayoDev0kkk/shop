@@ -11,8 +11,8 @@ const ProductDetail = () => {
     },[])
     return (
         <div className='flex items-start container'>
-                <img className='w-1/3 mt-8' src={detail.image} alt=""/>
-                <div className='mt-28 text-start ml-10'>
+                <img className='w-1/4 mt-14' src={detail.image} alt=""/>
+                <div className='mt-36 text-start ml-10'>
                     <h1 className='font-bold text-2xl'>{detail.title}</h1>
                     <p className='text-gray-700'>{detail.description}</p>
                 </div>
