@@ -1,7 +1,7 @@
 import React from 'react';
 import {SlBasket} from "react-icons/sl";
 import {useDispatch} from "react-redux";
-import {addToBasket} from "../../../redux/ActionCreators";
+import {addToBasket} from "../../../redux/ActionCreators/BasketActions";
 
 const AddToBasketBtn = ({product}) => {
     const dispatch = useDispatch()

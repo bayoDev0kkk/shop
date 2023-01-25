@@ -2,11 +2,11 @@ import React from 'react';
 import {FcEmptyTrash} from "react-icons/fc";
 import {AiOutlineMinus, AiOutlinePlus} from "react-icons/ai";
 import {useDispatch, useSelector} from "react-redux";
-import {addToBasket, DeleteFromBasket, MinusQuantity} from "../../redux/ActionCreators";
+import {addToBasket, DeleteFromBasket, MinusQuantity} from "../../../redux/ActionCreators/BasketActions";
 
 const BasketRow = ({el}) => {
     const dispatch = useDispatch()
-    const {currencies,defaultCurrency} = useSelector(state => state)
+    const {currencies,defaultCurrency} = useSelector(state => state.main)
     return (
         <tr className="bg-gray-800">
             <th scope="row"

@@ -2,10 +2,9 @@ import React from 'react';
 import {useSelector} from "react-redux";
 import BasketTable from "./BasketTable";
 import {Link} from "react-router-dom";
-// import BasketRow from "./BasketRow";
 
 const Basket = () => {
-    const {basket} = useSelector(s => s)
+    const {basket} = useSelector(s => s.basket)
     return (
         <div className='container'>
             <div className="relative overflow-x-auto my-14">

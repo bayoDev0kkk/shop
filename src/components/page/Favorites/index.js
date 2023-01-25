@@ -3,7 +3,7 @@ import ProductCard from "../ProductCard";
 import {useSelector} from "react-redux";
 
 const Favorites = () => {
-    const {favorites} = useSelector(state => state)
+    const {favorites} = useSelector(state => state.favorites)
     return (
         <div className='container'>
             <div className='flex flex-wrap  py-16'>

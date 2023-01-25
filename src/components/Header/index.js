@@ -1,11 +1,12 @@
 import React from 'react';
 import {Link, NavLink} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
-import {chooseCurrency} from "../../redux/ActionCreators";
+import {chooseCurrency} from "../../redux/ActionCreators/MainActions";
+import l from '../../assets/img/logo.svg'
 
 const Header = () => {
     const dispatch = useDispatch()
-    const {defaultCurrency} = useSelector(s => s)
+    const {defaultCurrency} = useSelector(s => s.main)
     const selectValues = {
         $:'USA',
         RUB:'RUB',
@@ -17,7 +18,7 @@ const Header = () => {
             <nav className=" border-gray-200 px-4 lg:px-6 py-5 bg-gray-800">
                 <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
                     <Link to="/" className="flex items-center">
-                        <img src="https://flowbite.com/docs/images/logo.svg" className="mr-3 h-6 sm:h-9"
+                        <img src={l} className="mr-3 h-6 sm:h-9"
                              alt="Flowbite Logo"/>
                         <span
                             className="self-center text-xl font-semibold whitespace-nowrap text-white">MOTION STORE</span>

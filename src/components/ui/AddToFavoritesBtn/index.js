@@ -1,11 +1,11 @@
 import React from 'react';
 import {FaHeart, FaTrash} from "react-icons/fa";
 import {useDispatch, useSelector} from "react-redux";
-import {addToFavorites} from "../../../redux/ActionCreators";
+import {addToFavorites} from "../../../redux/ActionCreators/FavoritesActions";
 
 const AddToFavoritesBtn = ({product}) => {
     const dispatch = useDispatch()
-    const {favorites} = useSelector(state => state)
+    const {favorites} = useSelector(state => state.favorites)
     const found = favorites.some(el => el.id === product.id)
     return (
         <button onClick={() => dispatch(addToFavorites(product))}

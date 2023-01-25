@@ -3,7 +3,8 @@ import BasketRow from "./BasketRow";
 import {useSelector} from "react-redux";
 
 const BasketTable = () => {
-    const {basket,currencies,defaultCurrency} = useSelector(s => s)
+    const {currencies,defaultCurrency} = useSelector(s => s.main)
+    const {basket} = useSelector(s => s.basket)
     const totalPrice = basket.reduce((acc,el) => {
         return acc + el.price * el.quantity
     },0) * currencies[defaultCurrency]
