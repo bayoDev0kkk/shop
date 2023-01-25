@@ -30,7 +30,7 @@ const BasketRow = ({el}) => {
                 </span>
             </td>
             <td className="px-6 py-4">
-                {el.price * el.quantity * currencies[defaultCurrency]}
+                {Math.round(el.price * el.quantity * currencies[defaultCurrency])}
             </td>
             <td className="px-6 py-4 text-xl">
                 <FcEmptyTrash onClick={() => dispatch(DeleteFromBasket(el.id))} className='cursor-pointer'/>

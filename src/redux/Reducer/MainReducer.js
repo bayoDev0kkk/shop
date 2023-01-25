@@ -6,13 +6,13 @@ import {
 const initialState = {
     product: [],
     oneProduct: {},
-    currencies:{
-        SOM:86,
-        $:1,
-        RUB:68,
-        TENGE:462,
+    currencies: {
+        SOM: 86,
+        $: 1,
+        RUB: 68,
+        TENGE: 462,
     },
-    defaultCurrency:localStorage.getItem('currency') || '$'
+    defaultCurrency: localStorage.getItem('currency') || '$'
 
 }
 
@@ -21,11 +21,11 @@ export const MainReducer = (state = initialState, action) => {
         case GET_PRODUCT: {
             return {...state, product: action.payload};
         }
-        case GET_ONE_PRODUCT:{
-            return {...state,oneProduct: action.payload}
+        case GET_ONE_PRODUCT: {
+            return {...state, oneProduct: action.payload}
         }
         case CHOOSE_THE_CURRENCY: {
-            return {...state,defaultCurrency: action.payload}
+            return {...state, defaultCurrency: action.payload}
         }
         default:
             return state;

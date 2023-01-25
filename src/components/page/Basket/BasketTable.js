@@ -43,7 +43,7 @@ const BasketTable = () => {
 
                     </td>
                     <td className="px-6 py-3">
-                        {totalPrice} {defaultCurrency}
+                        {Math.round(totalPrice)} {defaultCurrency}
                     </td>
                     <td className="px-6 py-3 rounded-r-lg"></td>
                 </tr>

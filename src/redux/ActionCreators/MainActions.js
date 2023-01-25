@@ -13,7 +13,6 @@ export const getProduct = () => {
          console.log(e)
       }
    }
-   // return {type:GET_PRODUCT, payload: data}
 }
 export const getOneProduct = (id) => {
    return async (dispatch) => {
@@ -25,7 +24,6 @@ export const getOneProduct = (id) => {
          console.log(e)
       }
    }
-   // return {type:GET_PRODUCT, payload: data}
 }
 
 
